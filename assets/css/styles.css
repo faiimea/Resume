@@ -129,8 +129,66 @@ img{
     transition: .3s;
 }
 /*========== NAV ==========*/
+.nav{
+    height: var(--header-height);
+    display: flex; /* 弹性盒子 */
+    justify-content: space-between; /* 弹性盒子容器中子元素在主轴 */
+    align-items: center;    /* 弹性盒子容器中子元素在交叉轴 */
+}
 
+/* 小屏幕限定 */
+@media screen and (max-width:968px){
+    .nav__menu{
+        position: fixed;
+        bottom: -100%; /* 定义底边栏的大小 */
+        left: 0;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        background-color: var(--body-color);
+        box-shadow: 0 -1px 4px rgba(0,0,0,.1);
+        border-radius: 1rem 1rem 0 0;
+        z-index: var(--z-fixed);
+        transition: .3s;
+    }
+}
 
+.nav__logo,.nav__toggle{
+    color:var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__toggle{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav__item{
+    text-align: center;
+}
+
+/* 网格布局 */
+.nav__list{
+    display: grid;
+    grid-template-columns: repeat(3,lfr); /*网格容器平均分成三列*/
+    gap: 2rem;
+}
+
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    font-size: var(--small-font-size);
+    color:var(--text-color-light);
+    font-weight: var(--font-medium);
+}
+
+.nav__icon{
+    font-size: 1.2rem;
+    margin-bottom: var(--mb-1);
+}
+
+.show-menu{
+    bottom: var(--header-height);
+}
 /* Show menu */
 
 
