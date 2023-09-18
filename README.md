@@ -10,5 +10,7 @@ Resume based on html/css/javascript
 - [x] 不同theme主题切换
 - [ ] 主页动画
 - [ ] 一些可能塞进去的神秘插件
+- [ ] 网站上线（说不定会用一下FaSite的服务器）
 
 ## View
+![](Image/view.png)
